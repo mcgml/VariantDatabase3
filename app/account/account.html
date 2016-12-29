@@ -1,0 +1,35 @@
+<div class="col-md-12">
+    <div class="panel panel-default margin-top-15px">
+        <div class="panel-heading">
+            <h3 class="panel-title">User&nbspAccount</h3>
+        </div>
+        <div class="panel-body">
+            <div class="col-md-4">
+                <i id="user-account-image" class="fa fa-user-md"></i>
+            </div>
+            <div class="col-md-8">
+                <h2>Your Settings</h2>
+                <div class="table-responsive">
+                <table id="user-account-table" class="table borderless">
+                    <tbody>
+                    <tr><th>Name</th><td>{{user.properties.fullName}}</td></tr>
+                    <tr><th>Email</th><td>{{user.properties.email}}</td></tr>
+                    <tr><th>Admin</th><td><i data-ng-class="{'fa fa-check': user.properties.admin, 'fa fa-times': !user.properties.admin}" aria-hidden="true"></i></td></tr>
+                    <tr><th>Password</th>
+                        <td>
+                            <input type="password" class="form-control no-margin" placeholder="********" data-ng-model="newPassword">
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-success" data-ng-click="updatePassword()">
+                                <i class="fa fa-pencil"></i>&nbspUpdate
+                            </button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+</div>

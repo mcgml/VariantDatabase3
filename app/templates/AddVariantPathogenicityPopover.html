@@ -1,0 +1,16 @@
+<form role="form">
+    <div class="form-group">
+        <select class="form-control" data-ng-model="selectedItem" ng-options="values.indexOf(selectedItem) as selectedItem for selectedItem in values"></select>
+    </div>
+</form>
+<div class="form-group">
+    <textarea class="form-control" placeholder="Give evidence" rows="3" data-ng-model="evidence"></textarea>
+</div>
+<div class="btn-group margin-top-15px" role="group"> 
+    <button type="button" class="btn btn-primary" data-ng-click="variantPathogenicity.add(element.variant.properties.variantId, selectedItem, evidence)"> 
+        <i class="fa fa-check"></i>&nbsp;Add 
+    </button> 
+    <button type="button" class="btn btn-danger margin-left-10px" data-ng-click="element.variant.properties.isOpen = false"> 
+        <i class="fa fa-times"></i>&nbsp;Close
+    </button> 
+</div> 
